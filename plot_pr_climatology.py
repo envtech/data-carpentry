@@ -80,7 +80,11 @@ if __name__ == '__main__':
 
     parser.add_argument("outfile", type=str, help="Output file name")
 
+if gridlines:
+    plt.gca().gridlines()
 
+    parser.add_argument("--gridlines", action="store_true", default=False,
+                    help="Include gridlines on the plot")
 
     args = parser.parse_args()
     
